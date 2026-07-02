@@ -18,6 +18,7 @@ class View
         echo '<header class="topbar"><a href="/vsl' . ($query ? '?' . $query : '') . '" class="brand"><span>FunnelOps</span><small>launch desk</small></a>';
         echo '<nav><a href="/qa">QA</a><a href="/admin">Admin</a><a href="/members">Members</a></nav></header>';
         echo '<main>' . $body . '</main>';
+        echo '<script src="https://unpkg.com/vue@3/dist/vue.global.prod.js" defer></script>';
         echo '<script src="/assets/app.js" defer></script>';
         echo '</body></html>';
     }

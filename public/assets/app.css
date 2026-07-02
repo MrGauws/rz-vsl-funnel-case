@@ -110,7 +110,8 @@ h2 {
 .metrics,
 .stats,
 .actions,
-.flow {
+.flow,
+.meter-inner {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -118,7 +119,8 @@ h2 {
 
 .metrics span,
 .stats span,
-.flow span {
+.flow span,
+.meter-inner span {
     border: 1px solid var(--line);
     border-radius: 8px;
     background: var(--white);
@@ -126,8 +128,25 @@ h2 {
 }
 
 .metrics strong,
-.stats strong {
+.stats strong,
+.meter-inner strong {
     color: var(--accent-dark);
+}
+
+.funnel-meter {
+    grid-column: 1 / -1;
+    margin-top: -10px;
+}
+
+.meter-inner {
+    align-items: center;
+}
+
+.meter-label {
+    color: var(--warm);
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
 .video-shell,

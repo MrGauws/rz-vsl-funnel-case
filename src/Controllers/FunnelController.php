@@ -54,6 +54,7 @@ class FunnelController
                     <div class="progress"><span id="watch-progress"></span></div>
                     <p class="muted">The buy button is intentionally delayed, the same pattern used on long-form VSL pages.</p>
                 </div>
+                <div id="funnel-meter" class="funnel-meter" data-variant="' . htmlspecialchars($variant, ENT_QUOTES, 'UTF-8') . '"></div>
             </section>
             <section class="band">
                 <div class="section-head">

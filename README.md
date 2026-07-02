@@ -18,7 +18,10 @@ It demonstrates:
 ## Stack
 
 - PHP 7.4 compatible.
-- Plain PHP router/controllers/services to keep the demo dependency-free.
+- Plain PHP router/controllers/services to keep the live demo dependency-free on this machine.
+- Laravel-style routes in `routes/web.php`.
+- Laravel migrations in `database/migrations`.
+- Vue widget on the VSL page.
 - File-backed demo storage in `storage/funnel.json`.
 - Production SQL shape documented in `database/schema.sql`.
 - HTML, CSS, and JavaScript.
@@ -60,6 +63,15 @@ You should see:
 - `member_access`
 
 The live PHP demo writes to `storage/funnel.json` to stay dependency-free on PHP 7.4. The SQLite file is included so the same data model can be inspected in Beekeeper during the interview. In production, this would be MySQL/PostgreSQL through Laravel migrations or a repository layer.
+
+## Framework fit
+
+The job ad mentions PHP frameworks and React/Vue. This repo includes a runnable PHP version plus the framework-facing pieces I would use in a production implementation:
+
+- `routes/web.php` shows the Laravel route map.
+- `database/migrations` contains Laravel migration classes.
+- `docs/framework-port.md` explains the Laravel/CodeIgniter port.
+- `public/assets/app.js` mounts a small Vue 3 launch-signal widget when Vue is available.
 
 ## Demo flow
 
