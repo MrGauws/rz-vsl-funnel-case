@@ -33,6 +33,32 @@ Open:
 http://localhost:8080
 ```
 
+## Open the demo database in Beekeeper
+
+Create/update the SQLite database file:
+
+```bash
+node scripts/create-sqlite-db.mjs
+```
+
+Then open Beekeeper Studio:
+
+1. Click **New Connection**.
+2. Select **SQLite**.
+3. Choose this file:
+
+```text
+storage/funnel.sqlite
+```
+
+You should see:
+
+- `funnel_events`
+- `orders`
+- `member_access`
+
+The live PHP demo writes to `storage/funnel.json` to stay dependency-free on PHP 7.4. The SQLite file is included so the same data model can be inspected in Beekeeper during the interview. In production, this would be MySQL/PostgreSQL through Laravel migrations or a repository layer.
+
 ## Demo flow
 
 1. Start at `/vsl`.
@@ -77,4 +103,3 @@ curl -X POST http://localhost:8080/webhook/purchase ^
   -H "Content-Type: application/json" ^
   -d "{\"marketplace\":\"digistore24\",\"transaction_id\":\"txn_api_demo\",\"email\":\"buyer@example.com\",\"product_code\":\"VSL-PRO\",\"amount_cents\":4900,\"status\":\"approved\",\"affiliate_id\":\"aff-42\",\"click_id\":\"click-99\"}"
 ```
-

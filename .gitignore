@@ -1,5 +1,6 @@
 storage/*.json
 storage/*.log
+!storage/funnel.sqlite
 !.gitkeep
 .server.pid
 .DS_Store
