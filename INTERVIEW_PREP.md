@@ -2,7 +2,7 @@
 
 ## One-minute pitch
 
-I understand this role as full-stack development for revenue-critical funnels. The code is not just a website; it affects paid traffic, checkout completion, affiliate attribution, upsells, member access, and launch quality. I built this mini-case to show how I think about the full path from VSL to checkout to webhook to members area.
+I understand this role as full-stack development for revenue-critical funnels. The work is not only page building; it affects paid traffic, checkout completion, affiliate attribution, upsells, member access, and launch quality. I built this mini-case to show how I think through the full path from VSL to checkout to webhook to members area.
 
 ## How I would explain the architecture
 
@@ -17,11 +17,11 @@ I understand this role as full-stack development for revenue-critical funnels. T
 
 ### How do you QA a funnel before launch?
 
-I test it like a customer and like an operator. I check video, audio, CTA timing, every button, mobile layout, checkout redirect, query parameter preservation, webhook delivery, thank-you routing, member access, console errors, network waterfall, Cloudflare cache rules, and logs. I also want a rollback point before deploy.
+I test it like a buyer and like the person who gets paged if it breaks. I check video, audio, CTA timing, every button, mobile layout, checkout redirect, query parameter preservation, webhook delivery, thank-you routing, member access, console errors, network waterfall, Cloudflare cache rules, and logs. I also want a known rollback point before deploy.
 
 ### How would you debug a broken checkout?
 
-I would reproduce the issue and isolate where it fails: click handler, redirect, marketplace checkout, payment result, webhook, thank-you page, or member access. Then I would inspect browser console, network requests, query parameters, server logs, webhook logs, and marketplace configuration.
+I would reproduce the issue and isolate where it fails: click handler, redirect, marketplace checkout, payment result, webhook, thank-you page, or member access. Then I would inspect the browser console, network requests, query parameters, server logs, webhook logs, and marketplace configuration.
 
 ### How would you speed up a VSL page?
 
@@ -40,4 +40,3 @@ The pattern is preserving affiliate attribution into checkout, receiving a serve
 - How do you currently run A/B tests?
 - Which marketplace is most important: ClickBank, Digistore24, or both?
 - What does success look like in the first 30 to 60 days?
-

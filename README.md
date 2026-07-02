@@ -1,12 +1,14 @@
-# VSL Funnel Mini-Case
+# FunnelOps Launch Desk
 
-This is a compact full-stack interview case for a performance marketing / direct response funnel developer role.
+Small full-stack case for a performance marketing / direct response funnel developer role.
+
+I built it around the parts of a funnel that tend to cause real launch problems: broken video states, missing attribution, checkout handoff mistakes, duplicate webhooks, access creation, and unclear QA ownership.
 
 It demonstrates:
 
 - VSL landing page with timed CTA behavior.
 - A/B variant assignment and query parameter preservation.
-- Mock ClickBank/Digistore24 checkout handoff.
+- Mock ClickBank / Digistore24 checkout handoff.
 - Purchase webhook that creates an order and member access.
 - Upsell, downsell, thank-you, and members pages.
 - Admin telemetry view for events, orders, and access grants.
@@ -75,15 +77,15 @@ The live PHP demo writes to `storage/funnel.json` to stay dependency-free on PHP
 
 I would describe this project like this:
 
-> I built a small revenue-critical funnel flow. The important parts are not only the pages, but the full customer journey: preserving affiliate tracking, avoiding broken checkout paths, handling a marketplace webhook, granting access only after purchase, and checking the whole path before launch.
+> I built a small revenue-critical funnel flow. The interesting part is not just rendering pages, but keeping the whole path intact: traffic parameters, VSL timing, checkout handoff, marketplace webhook, upsell/downsell routing, and member access.
 
 Key engineering choices:
 
 - I kept the runtime dependency-free so the case can run anywhere with PHP.
-- I separated controllers, services, support classes, public assets, storage, and SQL.
+- I separated controllers, services, support classes, public assets, storage, and SQL so it is easy to talk through.
 - I treated tracking parameters as first-class data because affiliate funnels depend on attribution.
-- I made the webhook idempotent by checking marketplace plus transaction ID.
-- I included a QA checklist because the role specifically mentions no broken videos, audio, or checkout flows.
+- I made the webhook idempotent by checking marketplace + transaction ID.
+- I included a QA checklist because the role specifically calls out broken videos, audio, checkout flows, and speed.
 
 ## What I would improve in production
 

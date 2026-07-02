@@ -32,14 +32,14 @@ class AdminController
 
         View::render('Admin Dashboard', '
             <section class="panel wide">
-                <p class="eyebrow">Operations view</p>
-                <h1>Funnel telemetry</h1>
+                <p class="eyebrow">Ops snapshot</p>
+                <h1>What I would check before calling this live</h1>
                 <div class="stats">
                     <span><strong>' . count($data['events']) . '</strong> events</span>
                     <span><strong>' . count($data['orders']) . '</strong> orders</span>
                     <span><strong>' . count($data['access']) . '</strong> access grants</span>
                 </div>
-                <h2>Recent events</h2>
+                <h2>Recent funnel events</h2>
                 <table><thead><tr><th>Event</th><th>Variant</th><th>Path</th></tr></thead><tbody>' . $eventRows . '</tbody></table>
                 <h2>Recent orders</h2>
                 <table><thead><tr><th>Transaction</th><th>Email</th><th>Status</th></tr></thead><tbody>' . $orderRows . '</tbody></table>
@@ -52,7 +52,7 @@ class AdminController
         View::render('Launch QA Checklist', '
             <section class="panel wide">
                 <p class="eyebrow">Launch checklist</p>
-                <h1>Revenue-critical QA</h1>
+                <h1>QA before traffic goes live</h1>
                 <ul class="checklist columns">
                     <li>Video loads on desktop and mobile</li>
                     <li>Audio starts and controls are visible</li>
@@ -75,4 +75,3 @@ class AdminController
         ');
     }
 }
-
