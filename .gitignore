@@ -1,0 +1,6 @@
+storage/*.json
+storage/*.log
+!.gitkeep
+.server.pid
+.DS_Store
+Thumbs.db
